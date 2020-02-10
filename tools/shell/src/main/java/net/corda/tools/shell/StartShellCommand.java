@@ -18,7 +18,8 @@ public class StartShellCommand extends InteractiveShellCommand {
 
     @Command
     @Man("An alias for 'flow start'. Example: \"start Yo target: Some other company\"")
-    public void main(@Usage("The class name of the flow to run, or an unambiguous substring") @Argument String name,
+    @Usage("An alias for 'flow start'. Example: \"start Yo target: Some other company\"")
+    public void start(@Usage("The class name of the flow to run, or an unambiguous substring") @Argument String name,
                      @Usage("The data to pass as input") @Argument(unquote = false) List<String> input) {
 
         logger.info("Executing command \"start {} {}\",", name, (input != null) ? input.stream().collect(joining(" ")) : "<no arguments>");
